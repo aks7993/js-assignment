@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="utf=8">
+        <title>This is my JS Assignment</title>
+        <h2>Day 1 Assignment</h2>
+    </head>
+    <body>
+        <h2>Answer:1</h2>
+        <script type="text/javascript"> 
+            var myDate = new Date(); 
+            var myDay = myDate.getDay(); 
+            
+            // Array of days. 
+            var weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']; 
+            document.write("Today is : " + weekday[myDay]); 
+            document.write("<br/>"); 
+            
+            // get hour value. 
+            var hours = myDate.getHours(); 
+            var ampm = hours >= 12 ? 'PM' : 'AM'; 
+            hours = hours % 12; 
+            hours = hours ? hours : 12; 
+            var minutes = myDate.getMinutes(); 
+            minutes = minutes < 10 ? '0' + minutes : minutes; 
+            var myTime = hours + " " + ampm + " : " + minutes + " : " + myDate.getMilliseconds(); 
+            document.write("\tCurrent time is : " + myTime); 
+        </script>
+        <hr>
+        <h2>Answer:2</h2>
+        <button onclick="window.print()">Print</button>
+        <hr>
+        <h2>Answer:3</h2>
+        <p>Date: </p>
+        <p id="dateget"></p>
+        <script>
+            var today = new Date();
+            var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+            document.getElementById('dateget').innerHTML=date;
+        </script>
+        
+   
+    </body>
+</html>
